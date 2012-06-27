@@ -82,15 +82,11 @@ function imgReady(imgs,fn,context){
 	
 		if(Img.readyState && Img.readyState === "complete"){
 			length--;
-			if(!length){
-				fn.call(context);
-			}
+			!length && fn.call(context);
 		}else{
 			Img.onload = function(){
 				length--;
-				if(!length){
-					fn.call(context);
-				}
+				!length && fn.call(context);
 			}
 		}
 		Img.src = imgs[i].src;
