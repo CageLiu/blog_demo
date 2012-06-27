@@ -85,13 +85,14 @@ function imgReady(imgs,fn,context){
 			imgs[i].onreadystatechange = function(){
 				if(this.readyState === "complete"){
 					length--;
-					document.title = length + "px";
+					document.title = "还剩 " + length + " 张图片!";
 					!length && fn.call(context);
 				}
 			}
 		}else{
 			imgs[i].onload = function(){
 				length--;
+				document.title = "还剩 " + length + " 张图片!";
 				!length && fn.call(context);
 			}
 		}
