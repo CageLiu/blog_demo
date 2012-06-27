@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			ul{
+				list-style:none;
+			}
+			html{
+				overflow-y:scroll;
+				overflow-x:hidden;
+			}
+			a{
+				color:#333;
+				text-decoration:none;
+				outline:none;
+			}
+			a img{
+				border:none 0;
+				vertical-align:bottom;
+			}
+			.justify_list{
+				letter-spacing:-0.5em;
+				font-size:0;
+				text-align:justify;
+				text-justify:distribute-all-lines;
+				position:relative;
+				*zoom:1;
+			}
+			.justify_list:after{
+				content:"";
+				display:inline-block;
+				width:100%;
+				height:0;
+				overflow:hidden;
+			}
+			.justify_list .justify_item{
+				display:inline-block;
+				letter-spacing:normal;
+				font-size:12px;
+				vertical-align:top;
+				text-align:left;
+				text-justify:auto;
+				*display:inline;
+				*zoom:1;
+			}
+			#waterfall{
+				padding-top:16px;
+				padding-bottom:16px;
+			}
+			#waterfall .justify_item{
+				width:192px;
+				padding:12px;
+				border:1px solid #ccc;
+				box-shadow:1px 1px 3px #ccc;
+				text-align:center;
+				margin-bottom:10px;
+			}
+			#waterfall span{
+				display:block;
+				font-size:14px;
+				font-weigth:700;
+				margin-top:8px;
+			}
+			#waterfall img{
+				width:192px;
+			}
+			.loading{
+				background:url(loading.gif) no-repeat center bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="waterfall" class="justify_list loading">
+			
+		</ul>
+		<script type="text/javascript" src="waterfall.js"></script>
+	</body>
+
+
+			<!--
+			   -<li class="justify_item"><a href="#"><img src="img/1.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/2.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/3.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/4.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/5.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/6.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/7.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/8.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/9.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/10.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/11.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/12.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/13.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/14.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/15.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/16.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/17.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/18.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/19.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/20.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/21.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/22.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/23.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/24.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/25.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/26.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/27.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/28.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/29.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/30.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/31.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/32.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/33.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/34.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/35.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/36.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/37.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/38.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/39.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/40.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/41.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/42.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/43.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/44.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/45.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/46.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/47.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/48.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/49.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/50.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/51.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/52.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/53.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/54.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/55.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/56.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/57.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/58.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/59.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/60.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/61.jpg" alt="" ><span>01</span></a></li>
+			   -<li class="justify_item"><a href="#"><img src="img/62.jpg" alt="" ><span>01</span></a></li>
+			   -->
+		
+</html>
