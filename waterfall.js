@@ -74,22 +74,33 @@ function children(ele){
 }
 
 function imgReady(imgs,fn,context){
-	if(typeof document.body.style.minWidth === 'undefined'){fn.call(context)};
 	var len = imgs.length;
 	var length = len;
+	//alert(typeof imgs[0].onreadystatechange)
 	for(var i = 0; i < len; i++){
-		var Img = new Image();
+		//var Img = new Image();
+		//alert(Img.onreadystatechange);
 	
-		if(Img.readyState && Img.readyState === "complete"){
-			length--;
-			!length && fn.call(context);
+		if(typeof imgs[i].onreadystatechange !== "undefined"){
+			imgs[i].onreadystatechange = function(){
+				if(this.readyState === "complete"){
+					length--;
+					document.title = length + "px";
+					!length && fn.call(context);
+				}else{
+					imgs[i].onload = function(){
+						length--;
+						!length && fn.call(context);
+					}
+				}
+			}
 		}else{
-			Img.onload = function(){
+			imgs[i].onload = function(){
 				length--;
 				!length && fn.call(context);
 			}
 		}
-		Img.src = imgs[i].src;
+		//Img.src = imgs[i].src;
 	}
 }
 
@@ -214,4 +225,4 @@ var w = new waterfall({
 	"w"             : 218,
 	"itemClassName" : "justify_item"
 });
-document.title = (+new Date() - time);
+//document.title = (+new Date() - time);
