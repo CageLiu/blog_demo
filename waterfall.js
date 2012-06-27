@@ -206,8 +206,10 @@ var waterfall = function(options){
 	window.onscroll = function(){
 		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if(document.body.clientHeight - document.documentElement.clientHeight - sTop < 10){
-			_this.removeFilled();
-			_this.load(data,false);
+			_this.throttle(function(){
+				_this.removeFilled();
+				_this.load(data,false);
+			},_this);
 		}
 	}
 
