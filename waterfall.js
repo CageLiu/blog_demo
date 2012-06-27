@@ -87,11 +87,6 @@ function imgReady(imgs,fn,context){
 					length--;
 					document.title = length + "px";
 					!length && fn.call(context);
-				}else{
-					imgs[i].onload = function(){
-						length--;
-						!length && fn.call(context);
-					}
 				}
 			}
 		}else{
