@@ -130,7 +130,7 @@ var waterfall = function(options){
 	this.load = function(eles,rsize){
 		var temp = document.createElement("ul");
 		var old = children(this.context);
-		temp.style.visibility = "hidden";
+		temp.style.cssText = "height:0;visibility:hidden;overflow:hidden";
 		if(typeof eles === "string"){
 			temp.innerHTML = eles;
 		}else{
