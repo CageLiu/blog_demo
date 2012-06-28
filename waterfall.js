@@ -76,11 +76,7 @@ function children(ele){
 function imgReady(imgs,fn,context){
 	var len = imgs.length;
 	var length = len;
-	//alert(typeof imgs[0].onreadystatechange)
 	for(var i = 0; i < len; i++){
-		//var Img = new Image();
-		//alert(Img.onreadystatechange);
-	
 		if(typeof imgs[i].onreadystatechange !== "undefined"){
 			imgs[i].onreadystatechange = function(){
 				if(this.readyState === "complete"){
@@ -96,7 +92,6 @@ function imgReady(imgs,fn,context){
 				!length && fn.call(context);
 			}
 		}
-		//Img.src = imgs[i].src;
 	}
 }
 
@@ -116,7 +111,7 @@ var waterfall = function(options){
 			var oFilled = document.createElement("li");
 			oFilled.className = this.itemClassName;
 			oFilled.style.cssText = "height:0;overflow:hidden;visibility:hidden;padding-top:0;padding-bottom:0;";
-			if(typeof oFilled.style.minWidth !== "undefined"){
+			if(document.querySelector){
 				var oNbsp = document.createTextNode("\n");
 				oFragment.appendChild(oNbsp);
 			}
@@ -180,16 +175,18 @@ var waterfall = function(options){
 		}
 	};
 
-	this.throttle = function(fn,context){
+	this.throttle = function(fn,context,time){
+		time = time || 100;
 		clearTimeout(this.timer);
 		this.timer = setTimeout(function(){
 			fn.call(context);
-		},100);
+		},time);
 	}
 	
 	window.onresize = function(){
 		_this.throttle(function(){
 			if(Math.floor(document.documentElement.clientWidth / this.w) != this.colnum){
+				console.log(1);
 				for(var i = 0; i < this.colnum; i++){
 					this.cols[i]['height'] = 0;
 				}
@@ -201,16 +198,17 @@ var waterfall = function(options){
 				this.context.innerHTML = "";
 				this.load(data,true);
 			}
-		},_this);
+		},_this,100);
 	};
 
 	window.onscroll = function(){
 		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if(document.body.clientHeight - document.documentElement.clientHeight - sTop < 10){
 			_this.throttle(function(){
+			console.log(1);
 				_this.removeFilled();
 				_this.load(data,false);
-			},_this);
+			},_this,200);
 		}
 	}
 
