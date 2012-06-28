@@ -186,7 +186,6 @@ var waterfall = function(options){
 	window.onresize = function(){
 		_this.throttle(function(){
 			if(Math.floor(document.documentElement.clientWidth / this.w) != this.colnum){
-				console.log(1);
 				for(var i = 0; i < this.colnum; i++){
 					this.cols[i]['height'] = 0;
 				}
@@ -205,7 +204,6 @@ var waterfall = function(options){
 		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
 		if(document.body.clientHeight - document.documentElement.clientHeight - sTop < 10){
 			_this.throttle(function(){
-			console.log(1);
 				_this.removeFilled();
 				_this.load(data,false);
 			},_this,200);
