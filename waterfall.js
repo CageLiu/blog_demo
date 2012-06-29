@@ -193,7 +193,6 @@
 		},
 
 		arrange : function(eles,start){
-			this.finished = false;
 			var box = this.box;
 			var ncolnum = this.ncolnum;
 			var colnum;
@@ -234,6 +233,7 @@
 
 		load : function(){
 			if(!this.finished){return};
+			this.finished = false;
 			var _this = this;
 			var url = this.url + "?args=" + this.count;
 			var request = ajax({
