@@ -81,14 +81,6 @@
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/02/2011040206120322323849.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451549515549.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451049510081.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/27.jpg" alt="" ><span>27</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/28.jpg" alt="" ><span>28</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/29.jpg" alt="" ><span>29</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/30.jpg" alt="" ><span>30</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/31.jpg" alt="" ><span>31</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/32.jpg" alt="" ><span>32</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/33.jpg" alt="" ><span>33</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/34.jpg" alt="" ><span>34</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450649506861.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450149501737.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513445549495909.jpg" alt="" ><span>61</span></a></li>
@@ -96,7 +88,15 @@
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361752577329.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361352573673.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361052570017.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614360752567017.jpg" alt="" ><span>61</span></a></li>';
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614360752567017.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/27.jpg" alt="" ><span>27</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/28.jpg" alt="" ><span>28</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/29.jpg" alt="" ><span>29</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/30.jpg" alt="" ><span>30</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/31.jpg" alt="" ><span>31</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/32.jpg" alt="" ><span>32</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/33.jpg" alt="" ><span>33</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="img/34.jpg" alt="" ><span>34</span></a></li>';
 		break;
 	
 	case 5:
@@ -107,6 +107,11 @@
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513452149521753.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/02/2011040206120322323849.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451549515549.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451049510081.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450649506861.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/30/2011043000471302833235.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/22/2011052202110107861844.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://img1.gtimg.com/1/163/16353/1635319_550x550_0.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="img/50.jpg" alt="" ><span>50</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="img/51.jpg" alt="" ><span>51</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="img/52.jpg" alt="" ><span>52</span></a></li>
@@ -114,11 +119,7 @@
 			  <li class="justify_item"><a href="#"><img src="img/54.jpg" alt="" ><span>54</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="img/55.jpg" alt="" ><span>55</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="img/56.jpg" alt="" ><span>56</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="img/57.jpg" alt="" ><span>57</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451049510081.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450649506861.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://img1.gtimg.com/1/163/16353/1635319_550x550_0.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/30/2011043000471302833235.jpg" alt="" ><span>61</span></a></li>
-			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/22/2011052202110107861844.jpg" alt="" ><span>61</span></a></li>';
+			  <li class="justify_item"><a href="#"><img src="img/57.jpg" alt="" ><span>57</span></a></li>';
 		break;
+	}
 ?>
