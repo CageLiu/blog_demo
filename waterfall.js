@@ -180,6 +180,7 @@
 				this.filled.push(oFilled);
 			}
 			this.box.appendChild(oFragment);
+			this.finished = true;
 		},
 
 		removeFilled : function(){
@@ -228,10 +229,6 @@
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
 			box.appendChild(oFragment);
 			this.appendFilled();
-			var _this = this;
-			setTimeout(function(){
-				this.finished = true;
-			},10000);
 			box.style.visibility = "visible";
 		},
 
