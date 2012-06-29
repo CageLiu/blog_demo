@@ -1,6 +1,6 @@
 <?php
 
-	$random_number = mt_rand(1,3);
+	$random_number = mt_rand(1,6);
 	
 	switch($random_number){
 	case 1:
@@ -71,6 +71,37 @@
 			   <li class="justify_item"><a href="#"><img src="img/61.jpg" alt="" ><span>61</span></a></li>
 			   <li class="justify_item"><a href="#"><img src="img/62.jpg" alt="" ><span>62</span></a></li>';
 		break;
+
+	case 4:
+		echo '<li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513480549685049.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513454149541221.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513453449534705.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/02/2011040206122822348131.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513452149521753.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/02/2011040206120322323849.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451549515549.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513451049510081.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450649506861.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513450149501737.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/25/2011052513445549495909.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614362652586221.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361752577329.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361352573673.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614361052570017.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614360752567017.jpg" alt="" ><span>61</span></a></li>';
+		break;
+	
+	case 5:
+		echo '<li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/26/2011042614354952549221.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-06/01/2011060123103483434721.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-06/01/2011060123103183431577.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://img1.gtimg.com/1/163/16353/1635319_550x550_0.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/30/2011043000471302833235.jpg" alt="" ><span>61</span></a></li>
+			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/22/2011052202110107861844.jpg" alt="" ><span>61</span></a></li>';
+		break;
+
+	case 6:
+		echo "";
 	}
 
 ?>
