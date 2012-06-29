@@ -112,7 +112,6 @@
 			_this.throttle(function(){
 				var sTop = document.documentElement.scrollTop || document.body.scrollTop;
 				if(document.body.clientHeight - document.documentElement.clientHeight - sTop < 50){
-					this.removeFilled();
 					this.load();
 				}
 			},_this,500);
@@ -227,6 +226,7 @@
 			this.length = eles.length;
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
 			box.appendChild(oFragment);
+			this.removeFilled();
 			this.appendFilled();
 			box.style.visibility = "visible";
 		},
