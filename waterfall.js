@@ -115,7 +115,7 @@
 					this.removeFilled();
 					this.load();
 				}
-			},_this,200);
+			},_this,500);
 		}
 	};
 
@@ -160,6 +160,7 @@
 			}
 			function check(){
 				count--;
+				document.title = count;
 				!count && fn.apply(context,args);
 			}
 		},
@@ -227,7 +228,10 @@
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
 			box.appendChild(oFragment);
 			this.appendFilled();
-			this.finished = true;
+			var _this = this;
+			setTimeout(function(){
+				this.finished = true;
+			},10000);
 			box.style.visibility = "visible";
 		},
 
