@@ -85,8 +85,8 @@
 				var colnum = Math.floor(document.documentElement.clientWidth / width);
 				var ncolnum = this.ncolnum;
 				var box = this.box;
-				colnum < ncolnum ? (colnum = ncolnum,box.style.width = colnum * width + "px" ) : (box.style.width = "auto");
-	
+				colnum < ncolnum ? (box.style.width = colnum * width + "px" ) : (box.style.width = "auto");
+
 				if(colnum !== this.colnum){
 					this.colnum = colnum;
 					var eles;
