@@ -1,6 +1,6 @@
 <?php
 
-	$random_number = mt_rand(1,6);
+	$random_number = mt_rand(1,5);
 	
 	switch($random_number){
 	case 1:
@@ -121,9 +121,4 @@
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-04/30/2011043000471302833235.jpg" alt="" ><span>61</span></a></li>
 			  <li class="justify_item"><a href="#"><img src="http://wvw.meinvktv.com/uploadfile/2011-05/22/2011052202110107861844.jpg" alt="" ><span>61</span></a></li>';
 		break;
-
-	case 6:
-		echo "";
-	}
-
 ?>
