@@ -76,6 +76,7 @@
 		this.state = document.getElementById(this.state);
 		this.colnum = Math.floor(document.documentElement.clientWidth / this.width);
 		window.onload = function(){
+			_this.finished = true;
 			_this.load();
 		};
 		window.onresize = function(){
@@ -84,7 +85,7 @@
 				var colnum = Math.floor(document.documentElement.clientWidth / width);
 				var ncolnum = this.ncolnum;
 				var box = this.box;
-				colnum < ncolnum ? (colnum = ncolnum,box.style.width = colnum * width + "px" ) : (box.style.cssText = "");
+				colnum < ncolnum ? (colnum = ncolnum,box.style.width = colnum * width + "px" ) : (box.style.width = "auto");
 	
 				if(colnum !== this.colnum){
 					this.colnum = colnum;
@@ -190,13 +191,15 @@
 		},
 
 		arrange : function(eles,start){
+			this.finished = false;
 			var box = this.box;
 			var ncolnum = this.ncolnum;
 			var colnum;
 			var width = this.width;
 			var len = eles.length;
 			var oFragment = document.createDocumentFragment();
-			this.colnum < ncolnum ? (colnum = this.colnum = ncolnum,box.style.cssText = "width:" + colnum * width + "px") : (colnum = this.colnum,box.style.cssText = "");
+			box.style.visibility = "hidden";
+			this.colnum < ncolnum ? (colnum = this.colnum = ncolnum,box.style.width = colnum * width + "px") : (colnum = this.colnum,box.style.width = "auto");
 			for(var i = start; i < len; i++){
 				var o = eles[i];
 				var node = o.cloneNode(true);
@@ -221,13 +224,15 @@
 				this.cols.push(o);
 			}
 			this.length = eles.length;
-			//alert(eles)
-			eles[start].parentNode !== this.box && this.box.removeChild(eles[start].parentNode);
-			this.box.appendChild(oFragment);
+			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
+			box.appendChild(oFragment);
 			this.appendFilled();
+			this.finished = true;
+			box.style.visibility = "visible";
 		},
 
 		load : function(){
+			if(!this.finished){return};
 			var _this = this;
 			var url = this.url + "?args=" + this.count;
 			var request = ajax({
@@ -239,7 +244,7 @@
 						var eles = Array(_this.length);
 						var temp = document.createElement("ul");
 						var imgs;
-						temp.style.cssText = "visibility:hidden";
+						temp.style.cssText = "visibility:hidden;height:0;overflow:hidden";
 						temp.innerHTML = data;
 						_this.box.appendChild(temp);
 						imgs = temp.getElementsByTagName("img");
