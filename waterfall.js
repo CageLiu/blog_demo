@@ -115,7 +115,7 @@
 					this.removeFilled();
 					this.load();
 				}
-			},_this,500);
+			},_this,200);
 		}
 	};
 
