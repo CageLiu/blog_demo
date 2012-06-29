@@ -13,7 +13,7 @@
 			}
 			html{
 				overflow-y:scroll;
-				overflow-x:hidden;
+				overflow-x:auto;
 			}
 			a{
 				color:#333;
@@ -46,7 +46,6 @@
 				vertical-align:top;
 				text-align:left;
 				text-justify:auto;
-				position:relative;
 				*display:inline;
 				*zoom:1;
 			}
@@ -71,18 +70,21 @@
 			#waterfall img{
 				width:192px;
 			}
-			.loading{
-				background:url(loading.gif) no-repeat center center;
+			#loading{
+				width:100px;
+				height:32px;
+				line-height:32px;
+				padding-left:32px;
+				margin:-10px auto 40px;
+				text-align:center;
+				background:url(loading.gif) no-repeat 0 0;
 			}
 		</style>
 	</head>
 	<body>
-		<ul id="waterfall" class="justify_list loading">
-			
-		</ul>
-
-		<p style="text-align:center;color:#888;margin-top30px">加载中……</p>
-		<script type="text/javascript" src="waterfall.js"></script>
+		<ul id="waterfall" class="justify_list loading"></ul>
+		<div id="loading">正在加载……</div>
+		<script type="text/javascript" src="waterfall2.js"></script>
 	</body>
 
 
