@@ -95,7 +95,7 @@
 						this.cols[i] && (this.cols[i]['height'] = 0);
 					}
 					this.colnum = colnum;
-					//this.removeFilled();
+					this.removeFilled();
 					clone = this.box.cloneNode(true);
 					eles = this.children(clone);
 					this.box.innerHTML = "";
@@ -225,9 +225,8 @@
 			}
 			this.length = eles.length;
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
-			//box.appendChild(oFragment);
-			//this.removeFilled();
-			box.insertBefore(oFragment,this.filled[0] || null);
+			box.appendChild(oFragment);
+			this.removeFilled();
 			this.appendFilled();
 			box.style.visibility = "visible";
 		},
@@ -241,6 +240,7 @@
 				"url" : url,
 				"success" : function(data){
 					if(data.length === 0){
+						_this.state.style.background = "none";
 						_this.state.innerHTML = "没有更多数据了";
 					}else{
 						var eles = Array(_this.length);
@@ -269,7 +269,7 @@
 		"width"   : 218,					//列表项宽度
 		'iclass'  : "justify_item",			//列表项类名
 		'url'	  : "waterfall.php",		//请求url
-		"count"	  : 0						//load计数器，用用于生成新请求的url
+		"count"	  : 0						//load计数器，用于生成新请求的url
 	});
 }());
 
