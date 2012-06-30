@@ -95,14 +95,15 @@
 						this.cols[i] && (this.cols[i]['height'] = 0);
 					}
 					this.colnum = colnum;
+					this.cols = [];
+					this.maxH = 0;
+					this.length = 0;
 					this.removeFilled();
 					clone = this.box.cloneNode(true);
 					eles = this.children(clone);
 					this.box.innerHTML = "";
 					this.box.appendChild(clone);
-					this.cols = [];
-					this.maxH = 0;
-					this.length = 0;
+					this.appendFilled();
 					this.arrange(eles,0);
 				}
 			},_this,200);
@@ -165,6 +166,7 @@
 		},
 
 		appendFilled : function(){
+			if(this.filled.length === this.colnum){this.finished = true;return};
 			var oFragment = document.createDocumentFragment();
 			var len = this.filled.length;
 			for(var i = 0; i < this.colnum - len; i++){
@@ -225,8 +227,7 @@
 			}
 			this.length = eles.length;
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
-			box.appendChild(oFragment);
-			this.removeFilled();
+			box.insertBefore(oFragment,this.filled[0] || null);
 			this.appendFilled();
 			box.style.visibility = "visible";
 		},
