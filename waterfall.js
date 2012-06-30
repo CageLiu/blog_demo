@@ -95,7 +95,7 @@
 						this.cols[i] && (this.cols[i]['height'] = 0);
 					}
 					this.colnum = colnum;
-					this.removeFilled();
+					//this.removeFilled();
 					clone = this.box.cloneNode(true);
 					eles = this.children(clone);
 					this.box.innerHTML = "";
@@ -225,8 +225,9 @@
 			}
 			this.length = eles.length;
 			eles[start].parentNode !== box && box.removeChild(eles[start].parentNode);
-			box.appendChild(oFragment);
-			this.removeFilled();
+			//box.appendChild(oFragment);
+			//this.removeFilled();
+			box.insertBefore(oFragment,this.filled[0] || null);
 			this.appendFilled();
 			box.style.visibility = "visible";
 		},
