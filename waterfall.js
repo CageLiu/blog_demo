@@ -142,6 +142,7 @@
 		imgReady : function(imgs,fn,context,args){
 			var count = imgs.length;
 			var len = count;
+			var _this = this;
 			if(!count){
 				return fn.call(context);
 			}
@@ -149,18 +150,18 @@
 				var Img = imgs[i];
 				if(typeof Img.onreadystatechange !== "undefined"){
 					Img.onreadystatechange = function(){
-						this.readyState === "complete" && check();
+						this.readyState === "complete" && check.call(_this);
 					}
 				}else{
 					Img.onload = function(){
 						this.onload = null;
-						check();
+						check.call(_this);
 					}
 				}
 			}
 			function check(){
+				this.state.innerHTML = Math.round(((len - count) / len) * 100) + "%";
 				count--;
-				document.title = count;
 				!count && fn.apply(context,args);
 			}
 		},
@@ -230,11 +231,13 @@
 			box.insertBefore(oFragment,this.filled[0] || null);
 			this.appendFilled();
 			box.style.visibility = "visible";
+			this.state.innerHTML = "正在加载……";
 		},
 
 		load : function(){
 			if(!this.finished){return};
 			this.finished = false;
+			this.state.innerHTML = "0%";
 			var _this = this;
 			var url = this.url + "?args=" + this.count;
 			var request = ajax({
