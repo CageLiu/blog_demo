@@ -5,9 +5,14 @@
 
 @width:1000px;
 
+@red:red;
+
+@var:red;
+
+
 .border{
 	border-style:solid;
-	border-width:3px;	
+	border-width:3px;
 }
 .abc{
 	.border;
@@ -16,6 +21,6 @@
 	.abc;
 	border-color:red;
 	width:@width;
-	color:#fff;
+	color:@@var;
 	background:#333;
 }
