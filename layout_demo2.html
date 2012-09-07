@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>自适应表单</title>
+
+		<style type="text/css">
+			html{
+				overflow-x:hidden;
+				overflow-y:scroll;
+			}
+			body,ul,ol,p,dl,dd,form,textarea,h1,h2,h3,h4,fieldset,input{
+				margin:0;
+			}
+
+			ul,ol,input,button,td,th,fieldset{
+				padding:0;
+			}
+			ul,ol{
+				list-style-type:none;
+				list-style-position:outside;
+			}
+			a{
+				text-decoration:none;
+				color:#3B5998;
+			}
+			a:hover{
+				text-decoration:underline;
+			}
+			a img,fieldset{
+				border:none;
+			}
+			fieldset legend{
+				display:none
+			}
+			a,input,button,textarea{
+				outline:none;
+			}
+			textarea{
+				resize:none
+			}
+			table{
+				border-collapse:collapse;
+				border-spacing:0;
+			}
+			em{
+				font-style:normal
+			}
+			.clear{
+				clear:both;
+			}
+			.clearfix:after{
+				content:'';
+				height:0;
+				clear:both;
+				display:block;
+				overflow:hidden;
+			}
+			.clearfix{
+				*zoom:1;
+			}
+			body{
+				font:12px/1.5 "微软雅黑",Tahoma,simsun,'宋体',Helvetica,simsun,sans-serif;
+				color:#222;
+				background-color:#FFF;
+			}
+
+			.form input{
+				height:23px;
+				border:1px solid #ccc;
+			}
+
+			.form textarea{
+				height:120px;
+				width:400px;
+				border:1px solid #ccc;
+			}
+
+			.form,
+			.form .t{
+				display:inline-block;
+				*display:inline;
+				*zoom:1;
+			}
+			.form .item{
+				margin-bottom:5px;
+				position:relative;
+			}
+			.form .field{
+				display:block;
+				text-align:right;
+				line-height:1em;
+				position:relative;
+				top:8px;
+				padding-right:5px;
+			}
+			.form .f{
+				position:relative;
+				right:-100%;
+				top:-1em;
+				width:0;
+				margin-right:-99999999%;
+			}
+			.form .t{
+				white-space:nowrap;
+			}
+			.form .inline{
+				white-space:nowrap;
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<form action="">
+			<div class="form inline_tips">
+				<div class="item">
+					<label class="field">用户名:</label>
+					<div class="f inline">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">密码:</label>
+					<div class="f inline">
+						<input type="text" />
+						<div class="t">
+							*密码长度为6~18位
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">确认密码:</label>
+					<div class="f inline">
+						<input type="text" />
+						<div class="t">
+							*重新输入前面的密码
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">手机:</label>
+					<div class="f inline">
+						<input type="text" />
+						<div class="t">
+							(可选)输入您的手机号码
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">QQ:</label>
+					<div class="f inline">
+						<input type="text" />
+						<div class="t">
+							(可选)输入您的QQ号码
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">个性签名:</label>
+					<div class="f inline">
+						<textarea></textarea>
+						<div class="t">
+							(可选)输入您的个性签名
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+		<form action="">
+			<div class="form">
+				<div class="item">
+					<label class="field">姓名:</label>
+					<div class="f">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">开户银行:</label>
+					<div class="f">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">银行账号:</label>
+					<div class="f">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">再次输入银行账号:</label>
+					<div class="f">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<label class="field">请输入6为手机验证码:</label>
+					<div class="f">
+						<input type="text" style="width:300px" />
+						<div class="t">
+							*用户名可以包含数字、字母和下划线
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
